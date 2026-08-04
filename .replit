@@ -1,0 +1,4 @@
+run = "./mvnw spring-boot:run"
+
+[deployment]
+run = ["sh", "-c", "chmod +x mvnw && ./mvnw clean package -DskipTests && java -Xmx400m -Dserver.port=$PORT -jar target/*.jar"]
